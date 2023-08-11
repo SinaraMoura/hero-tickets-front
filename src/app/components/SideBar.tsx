@@ -6,7 +6,7 @@ import { BsQuestionCircle } from 'react-icons/bs'
 
 export const SideBar = () => {
     return (
-        <aside className="sidebar fixed z-10 top-16 bottom-0 text-xs text-blue h-screen right-0 p-2 w[90px] overflow-y-auto bg-gray-200 shadow">
+        <aside className="sidebar fixed z-10 top-16 bottom-0 text-xs text-blue h-screen right-0 p-2 w-[90px] overflow-y-auto bg-gray-200 shadow">
             <div className="h-full px-3 py-4 overflow-y-auto">
                 <div className="flex flex-col cursor-pointer justify-center items-center mb-9">
                     <AiOutlineHome size={30} />

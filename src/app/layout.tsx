@@ -19,10 +19,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt">
-      <body className={inter.className}>
+      <body className={inter.className} >
         <NavBar />
         <SideBar />
-
         <div className='mb-8 mt-16 mr-14'>
           {children}
         </div>

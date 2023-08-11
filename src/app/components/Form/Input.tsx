@@ -1,0 +1,45 @@
+import { ForwardRefRenderFunction, forwardRef } from 'react';
+
+interface IInput {
+    placeholder: string,
+    type: string,
+    title: string,
+    className?: string
+}
+
+export const InputBase: ForwardRefRenderFunction<HTMLInputElement & HTMLTextAreaElement, IInput> = (
+    { placeholder, type, title, className, ...rest },
+    ref
+) => {
+    if (type === 'textarea') {
+        return (
+            <div className={`mb-4 text-blue font-medium ${className}`}>
+                <label >
+                    {title}
+                    <textarea
+                        className='w-full px-6 py-[5px] bg-white rounded-lg border bordre-teal-400'
+                        placeholder={placeholder}
+                        ref={ref}
+                        rows={5}
+                    />
+                </label>
+            </div>
+        )
+    }
+    return (
+        <div className={`mb-4 text-blue font-medium ${className}`}>
+            <label >
+                {title}
+
+                <input
+                    className='w-full px-6 py-[5px] bg-white rounded-lg border bordre-teal-400'
+                    type={type}
+                    placeholder={placeholder}
+                    ref={ref}
+                    {...rest}
+                />
+            </label>
+        </div>
+    )
+};
+export const Input = forwardRef(InputBase);
