@@ -1,7 +1,7 @@
 import Image from "next/image"
 export const NavBar = () => {
     return (
-        <nav className="bg-blue flex mx-auto px-6 absolute top-0 w-full h-16 items-center ">
+        <nav className="bg-blue flex mx-auto px-6 fixed top-0 w-full h-16 items-center ">
             <Image
                 className="mr-[6rem]"
                 src="/logo.svg"
